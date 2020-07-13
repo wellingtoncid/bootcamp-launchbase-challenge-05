@@ -1,17 +1,12 @@
 {
-  "name": "challenge04",
+  "name": "challenge05",
   "version": "1.0.0",
-  "description": "Module4",
+  "description": "Module5",
   "main": "scripts.js",
   "scripts": {
     "start": "npm-run-all -p nodemoon browsersync",
-    "nodemoon": "nodemon server.js",
-    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, views'"
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "data.json"
-    ]
+    "nodemoon": "nodemon src/server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public,src/app/views'"
   },
   "keywords": [],
   "author": "Wellington Cid",
@@ -20,7 +15,8 @@
     "express": "^4.17.1",
     "intl": "^1.2.5",
     "method-override": "^3.0.0",
-    "nunjucks": "^3.2.1"
+    "nunjucks": "^3.2.1",
+    "pg": "^8.3.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",

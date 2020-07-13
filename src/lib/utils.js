@@ -1,5 +1,5 @@
 module.exports = {
-    age: function (timestamp) {
+    age(timestamp) {
         const today = new Date()
         const dob = new Date(timestamp)
 
@@ -17,7 +17,7 @@ module.exports = {
 
     },
 
-    education: function(degree) {
+    education(degree) {
         switch (degree) {
             case ('Associate'): return 'Associate'
             case ('Graduate'): return 'Graduate'
@@ -26,7 +26,7 @@ module.exports = {
         }
     },
 
-    date: function(timestamp) {
+    date(timestamp) {
         const date = new Date(timestamp)
 
         const year = date.getUTCFullYear()
