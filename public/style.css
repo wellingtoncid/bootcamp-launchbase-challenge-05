@@ -255,6 +255,7 @@ tbody tr td:last-child a,
     color: #333;
     font-size: 12px;
     border-radius: 4px;
+    text-align: center;
 }
 
 .table-container a {
@@ -277,4 +278,40 @@ tbody tr td:nth-child(2) span {
     margin-right: 4px;
     margin-top: 8px;
     text-transform: uppercase;   
+}
+
+/* FILTER */
+
+.table-container .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.table-container .header a {
+    margin: 0;   
+    width: 100px;
+}
+
+.table-container .header form {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    grid-gap: 8px;
+    color: #eee;
+}
+
+.table-container .header form input {
+    border: 1px solid #eee;
+    padding: 4px 8px;
+    box-sizing: border-box;
+}
+
+.table-container .header form button {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+    font-size: 12px;
+    text-transform: uppercase;
 }
