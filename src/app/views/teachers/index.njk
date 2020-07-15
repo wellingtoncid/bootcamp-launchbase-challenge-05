@@ -22,9 +22,9 @@
         <thead>
             <tr>
                 <th>Teacher</th>
-                <th>Attendence</th>
+                <th>Subjects taught</th>
                 <th>Students</th>
-                <th>View More</th>
+                <th>More</th>
             </tr>
         </thead>
         <tbody>
@@ -37,9 +37,7 @@
                     {{teacher.name}}
                 </td>
                 <td>
-                    {% for subjects_taught in teacher.subjects_taught %}
-                        <span>{{ subjects_taught }}</span>
-                    {% endfor %}
+                    {{ teacher.subjects_taught }}
                 </td>
                 <td>{{teacher.total_students}}</td>
                 <td><a href="/teachers/{{teacher.id}}">View</a></td>
@@ -47,6 +45,13 @@
             {% endfor %}
         </tbody>
     </table>
+
+    <div class="pagination"
+        data-page={{pagination.page}}
+        data-total={{pagination.total}}
+        data-filter={{filter}}
+    ></div>
+
 </div>
 
 {% endblock content %}
